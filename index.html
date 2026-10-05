@@ -1,0 +1,494 @@
+html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Hace que se adapte correctamente a celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>En memoria de Jesus Ruiz</title>
+
+    <style>
+
+        /* ==============================
+           CONFIGURACIÓN GENERAL
+           ============================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f5f2ec;
+            color: #3f3f3f;
+            line-height: 1.6;
+        }
+
+        /* ==============================
+           ENCABEZADO
+           ============================== */
+
+        header {
+            text-align: center;
+            padding: 35px 20px 25px;
+            background: #e8e1d5;
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-weight: normal;
+            color: #3e4b3c;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #777;
+        }
+
+        /* ==============================
+           FOTO PRINCIPAL
+           ============================== */
+
+        .foto-principal {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 25px auto 15px;
+
+            border: 5px solid #ffffff;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        .nombre {
+            text-align: center;
+            font-size: 30px;
+            color: #3e4b3c;
+            margin-top: 10px;
+        }
+
+        .fechas {
+            text-align: center;
+            font-size: 17px;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        /* ==============================
+           CONTENEDOR
+           ============================== */
+
+        .contenedor {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* ==============================
+           FRASE
+           ============================== */
+
+        .frase {
+            text-align: center;
+            font-style: italic;
+            font-size: 20px;
+            color: #666;
+
+            margin: 20px auto 35px;
+
+            max-width: 650px;
+        }
+
+        /* ==============================
+           SECCIONES
+           ============================== */
+
+        .seccion {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .seccion h2 {
+            text-align: center;
+            color: #3e4b3c;
+            margin-bottom: 15px;
+            font-size: 23px;
+        }
+
+        .seccion p {
+            font-size: 16px;
+        }
+
+        /* ==============================
+           GALERÍA
+           ============================== */
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+            cursor: pointer;
+
+            transition: transform 0.2s;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.03);
+        }
+
+        /* ==============================
+           BOTONES
+           ============================== */
+
+        .botones {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .boton {
+            display: inline-block;
+
+            background: #536653;
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px 22px;
+
+            margin: 5px;
+
+            border-radius: 25px;
+
+            font-size: 16px;
+
+            transition: background 0.2s;
+        }
+
+        .boton:hover {
+            background: #3e4b3c;
+        }
+
+        /* ==============================
+           PIE DE PÁGINA
+           ============================== */
+
+        footer {
+            text-align: center;
+
+            padding: 30px 20px;
+
+            color: #888;
+
+            font-size: 14px;
+        }
+
+        /* ==============================
+           ADAPTACIÓN PARA CELULAR
+           ============================== */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .nombre {
+                font-size: 25px;
+            }
+
+            .foto-principal {
+                width: 150px;
+                height: 150px;
+            }
+
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .galeria img {
+                height: 150px;
+            }
+
+            .seccion {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ======================================
+         ENCABEZADO
+         ====================================== -->
+
+    <header>
+
+        <h1>En memoria de</h1>
+
+        <p>
+            Un recuerdo que permanece para siempre
+        </p>
+
+    </header>
+
+
+    <!-- ======================================
+         FOTO PRINCIPAL
+         ====================================== -->
+
+    <img
+        src="C:\Users\Tecnico\Documents\memorial/principal.jpg"
+        alt="Fotografía de Juan Pérez"
+        class="foto-principal"
+    >
+
+
+    <!-- ======================================
+         NOMBRE
+         ====================================== -->
+
+    <h1 class="nombre">
+        Juan Pérez
+    </h1>
+
+
+    <!-- ======================================
+         FECHAS
+         ====================================== -->
+
+    <div class="fechas">
+
+        15 de marzo de 1948
+        <strong> — </strong>
+        20 de octubre de 2025
+
+    </div>
+
+
+    <main class="contenedor">
+
+
+        <!-- ======================================
+             FRASE
+             ====================================== -->
+
+        <div class="frase">
+
+            "Aunque ya no podamos verte,
+            siempre vivirás en nuestros corazones."
+
+        </div>
+
+
+        <!-- ======================================
+             HISTORIA
+             ====================================== -->
+
+        <section class="seccion">
+
+            <h2>
+                Su historia
+            </h2>
+
+            <p>
+
+                Juan fue una persona muy querida por su familia
+                y amigos. Durante su vida dejó muchos recuerdos,
+                enseñanzas y momentos que permanecerán siempre
+                en el corazón de quienes tuvieron la oportunidad
+                de conocerlo.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Esta página fue creada para conservar y compartir
+                algunos de esos recuerdos.
+
+            </p>
+
+        </section>
+
+
+        <!-- ======================================
+             GALERÍA
+             ====================================== -->
+
+        <section class="seccion">
+
+            <h2>
+                Recuerdos
+            </h2>
+
+
+            <div class="galeria">
+
+
+                <img
+                    src="C:\Users\Tecnico\Documents\memorial/principal.jpg"
+                    alt="Recuerdo 1"
+                >
+
+
+                <img
+                    src="C:\Users\Tecnico\Documents\memorial/foto2.jfif"
+                    alt="Recuerdo 2"
+                >
+
+
+                <img
+                    src="C:\Users\Tecnico\Documents\memorial/foto3.jfif"
+                    alt="Recuerdo 3"
+                >
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             PDF
+             ====================================== -->
+
+        <section class="seccion">
+
+            <h2>
+                Recuerdo familiar
+            </h2>
+
+            <p style="text-align:center;">
+
+                Puedes consultar o descargar el recuerdo
+                preparado por la familia.
+
+            </p>
+
+
+            <div class="botones">
+
+                <a
+                    href="documentos/recuerdo.pdf"
+                    target="_blank"
+                    class="boton"
+                >
+                    📖 Ver recuerdo
+                </a>
+
+
+                <a
+                    href="documentos/recuerdo.pdf"
+                    download
+                    class="boton"
+                >
+                    📥 Descargar PDF
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             VIDEO
+             ====================================== -->
+
+        <section class="seccion">
+
+            <h2>
+                Video de recuerdos
+            </h2>
+
+            <p style="text-align:center;">
+
+                También puedes agregar un video especial
+                de la familia.
+
+            </p>
+
+
+            <div class="botones">
+
+                <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    class="boton"
+                >
+                    🎥 Ver video
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             MENSAJE FINAL
+             ====================================== -->
+
+        <section class="seccion">
+
+            <h2>
+                Siempre presente
+            </h2>
+
+            <p style="text-align:center;">
+
+                "Las personas que amamos nunca se van
+                completamente; permanecen en nuestros
+                recuerdos y en nuestros corazones."
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ======================================
+         PIE DE PÁGINA
+         ====================================== -->
+
+    <footer>
+
+        Página creada en memoria de Jesus Ruiz
+
+        <br>
+
+        ❤️ Un recuerdo para siempre
+
+    </footer>
+
+
+</body>
+
+</html>
+```
